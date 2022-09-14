@@ -1,0 +1,1 @@
+# CKEditor 5 full screen plugin
