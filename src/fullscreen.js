@@ -22,6 +22,7 @@ export default class FullScreen extends Plugin {
     const t = editor.t;
     const rootElement = editor.editing.view.document.getRoot();
 
+    // Set the default configuration
     editor.config.define(CLOSE_ON_ESCAPE, true);
     editor.config.define(CLOSE_ON_CLICK, true);
 
