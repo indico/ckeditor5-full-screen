@@ -6,7 +6,6 @@
     <img src="assets/fullscreen-icon.png" />
 </p>
 
-
 Icon thanks to [css.gg](https://github.com/astrit/css.gg).
 
 ## Description
@@ -97,5 +96,6 @@ you can install this package directly:
 Just using `npm install /path/to/the/package` doesn't work because npm symlinks the package instead of copying it. This will cause duplicated packages when bundling the editor with webpack (this [error](https://ckeditor.com/docs/ckeditor5/latest/support/error-codes.html#error-ckeditor-duplicated-modules)). The fix is to create a zipped package with `npm pack` first and installing that one instead.
 
 Useful SO links:
+
 - https://stackoverflow.com/a/53215430
 - https://stackoverflow.com/a/45016447
