@@ -14,9 +14,11 @@ This plugin provides a full screen mode for ckeditor 5. The plugin adds a button
 
 ## Installation
 
-TODO: installation instructions
+Via npm:
 
-Check: https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html
+```bash
+npm i ckeditor5-full-screen
+```
 
 ### Add the plugin to ckeditor:
 
@@ -57,6 +59,9 @@ Editor.create(element, {
   });
 ```
 
+More information about installing plugins can be found in the official [documentation](https://ckeditor.com/docs/ckeditor5/latest/installation/getting-started/installing-plugins.html
+).
+
 ## Configuration
 
 | Name                       | Default value | Description                                                                            |
@@ -88,7 +93,9 @@ Editor.create(element, {
 
 ## Development
 
-If you want to run ckeditor locally e.g. using https://github.com/indico/ckeditor,
+Ignore this if you just want to use this package.
+
+If you want to run ckeditor locally using e.g. https://github.com/indico/ckeditor,
 you can install this package directly:
 
 `npm install $(npm pack /path/to/the/package | tail -1)`
