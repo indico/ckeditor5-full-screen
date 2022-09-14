@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/indico/ckeditor5-full-screen#readme",
   "dependencies": {
-    "@ckeditor/ckeditor5-core": "^35.1.0",
-    "@ckeditor/ckeditor5-ui": "^35.1.0"
+    "ckeditor5": "^35.0.1"
   },
   "devDependencies": {
     "eslint": "^8.23.1",
