@@ -1,6 +1,8 @@
 import Plugin from "@ckeditor/ckeditor5-core/src/plugin";
 import ButtonView from "@ckeditor/ckeditor5-ui/src/button/buttonview";
+
 import Maximize from "../theme/icons/maximize.svg";
+import { CLOSE_ON_ESCAPE, CLOSE_ON_CLICK } from "./config";
 
 import "../theme/fullscreen.css";
 
@@ -19,6 +21,9 @@ export default class FullScreen extends Plugin {
     const editor = this.editor;
     const t = editor.t;
     const rootElement = editor.editing.view.document.getRoot();
+
+    editor.config.define(CLOSE_ON_ESCAPE, true);
+    editor.config.define(CLOSE_ON_CLICK, true);
 
     const maximize = () => {
       const wrapperElement = editor.ui.view.element;
@@ -60,6 +65,9 @@ export default class FullScreen extends Plugin {
       // Make the toolbar button appear clicked when full screen is active
       button.bind("isOn").to(this, "isFullScreen");
 
+      const closeOnEscape = editor.config.get(CLOSE_ON_ESCAPE);
+      const closeOnClick = editor.config.get(CLOSE_ON_CLICK);
+
       // Close on escape
       const onKeyDown = (e) => {
         if (e.key === "Escape" && this.isFullScreen) {
@@ -78,12 +86,14 @@ export default class FullScreen extends Plugin {
 
       button.on("execute", () => {
         if (!this.isFullScreen) {
-          wrapperElement.addEventListener("keydown", onKeyDown);
-          wrapperElement.addEventListener("click", onClick);
+          closeOnEscape &&
+            wrapperElement.addEventListener("keydown", onKeyDown);
+          closeOnClick && wrapperElement.addEventListener("click", onClick);
           maximize();
         } else {
-          wrapperElement.removeEventListener("keydown", onKeyDown);
-          wrapperElement.removeEventListener("click", onClick);
+          closeOnEscape &&
+            wrapperElement.removeEventListener("keydown", onKeyDown);
+          closeOnClick && wrapperElement.removeEventListener("click", onClick);
           minimize();
         }
         this.isFullScreen = !this.isFullScreen;
