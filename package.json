@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-full-screen",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Adds a full screen support similar to the maximize plugin in ckeditor 4.",
   "main": "src/fullscreen.js",
   "repository": "github:indico/ckeditor5-full-screen",
