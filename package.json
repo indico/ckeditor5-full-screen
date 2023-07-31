@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-full-screen",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Adds a full screen support similar to the maximize plugin in ckeditor 4.",
   "main": "src/fullscreen.js",
   "repository": "github:indico/ckeditor5-full-screen",
@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/indico/ckeditor5-full-screen#readme",
   "dependencies": {
-    "ckeditor5": "^35.0.1"
+    "ckeditor5": "^38.1.1"
   },
   "devDependencies": {
-    "eslint": "^8.23.1",
+    "eslint": "^8.46.0",
     "eslint-config-indico": "^2.0.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0"
   },
   "scripts": {}
 }
